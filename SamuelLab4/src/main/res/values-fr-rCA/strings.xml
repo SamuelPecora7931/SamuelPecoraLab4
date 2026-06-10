@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Samuel Pecora n01437931</string>
+    <string name="portrait_text">Portrait Samuel Pecora n01437931</string>
+    <string name="landscape_text">Paysage Samuel Pecora n01437931</string>
+    <string name="input_hint">Entrez 6 chiffres</string>
+    <string name="second_screen_title">Mon Deuxième Écran Samuel Pecora n01437931</string>
+    <string name="number_prefix">Nombre: </string>
+    <string name="menu_dial">Composer</string>
+    <string name="menu_exit">Quitter</string>
+    <string name="menu_help">Aide</string>
+</resources>
