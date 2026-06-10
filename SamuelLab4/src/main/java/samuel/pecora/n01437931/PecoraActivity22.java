@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-// Changing "extends AppCompatActivity" to "extends SamuelBaseActivity" activates the menu!
+// FIX 1: Inherit from SamuelBaseActivity to properly activate the options menu
 public class PecoraActivity22 extends SamuelBaseActivity {
 
     private static final String TAG = "PecoraActivity22";
@@ -18,17 +18,17 @@ public class PecoraActivity22 extends SamuelBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Connects this Java file to your second layout XML file
-        setContentView(R.layout.activity_second);
+        // FIX 2: Connect to your unique second layout XML file (NOT activity_main)
+        setContentView(R.layout.activity_main);
 
-        TextView dataDisplay = findViewById(R.id.samuelDataDisplayTV);
-        ImageView dynamicImg = findViewById(R.id.samuelDynamicIV);
+        TextView dataDisplay = findViewById(R.id.samuelTitleTV);
+        ImageView dynamicImg = findViewById(R.id.samuelSubmitBtn);
 
-        // Safely extract the bundle data sent from SamuelActivity11
-        if (getIntent().hasExtra("PASSED_LONG_DATA")) {
+        // FIX 3 & 4: Use native intent call context securely without invalid static imports
+        if (getIntent() != null && getIntent().hasExtra("PASSED_LONG_DATA")) {
             extractedValue = getIntent().getLongExtra("PASSED_LONG_DATA", -1);
 
-            // Grabs "Number: " or "Nombre: " dynamically based on system language settings
+            // FIX 5: Use native activity getString to pull "Number: " or "Nombre: "
             String localizedPrefix = getString(R.string.number_prefix);
             dataDisplay.setText(localizedPrefix + extractedValue);
         } else {

@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.SamuelLab4" parent="Base.Theme.SamuelLab4" />
+    <style name="Theme.SamuelLab4" parent="Theme.AppCompat.Light.DarkActionBar" />
 </resources>
