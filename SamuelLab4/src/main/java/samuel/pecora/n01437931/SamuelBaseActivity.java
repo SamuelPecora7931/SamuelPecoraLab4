@@ -7,12 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 
-// This is the parent class you are building from scratch!
 public class SamuelBaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflates the main_menu.xml file into the Action Bar
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
